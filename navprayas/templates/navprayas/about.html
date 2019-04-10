@@ -30,6 +30,8 @@
 		<link rel="stylesheet" href="{% static 'css/main.css' %}">
 	</head>
 	<body class="dup-body">
+			<div id="fb-root"></div>
+            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ta_IN/sdk.js#xfbml=1&version=v3.2"></script>
 		<div class="dup-body-wrap">
 			<!-- Start Header Area -->
 			<header class="default-header">
@@ -43,8 +45,8 @@
 								<a href="/index">Home</a>
 								<a href="/about">About</a>
 								<a href="/events">Events</a>
-								<a href="#notifications">Notifications</a>
-                                <a href="#contact">Contact Us</a>
+								<a href="/notifications">Notifications</a>
+                                <a href="/team">Team</a>
 							</nav>
 							<div class="menu-bar"><span class="lnr lnr-menu"></span></div>
 						</div>
@@ -54,15 +56,15 @@
 		<!-- End Header Area -->
 		<!-- Start Banner Area -->
 		<section class="generic-banner relative">
-			<div class="container">
+			<div class="container" style="overflow-y:auto;">
 				<div class="row height align-items-center justify-content-center">
 					<div class="col-lg-10">
 						<div class="banner-content text-center">
 							<h2>About Navprayas</h2>
-							<p>
-								<strong>‘NAVPRAYAS’</strong>, a Hindi word which means ‘New effort’ , is a voluntary organisation established in the year 2000 with the motive of the upliftment of the native society (Manpur Patwatoli) in the educational, society and moral aspects. It is a team of society students studying in different colleges under various streams across the globe.<br><br>
+								<p>
+								<strong>'NAVPRAYAS’</strong>, a Hindi word which means ‘New effort’ , is a voluntary organisation established in the year 2000 with the motive of the upliftment of the native society (Manpur Patwatoli) in the educational, society and moral aspects. It is a team of society students studying in different colleges under various streams across the globe.<br><br>
 								This group allows us to think together in better way for spreading the light of education, matching the present scenario and other technical/non-technical developments in Manpur. We as a team leave no stone unturned in honouring them who set a milestone in dignifying our society through their dormant achievements. We, group of positive thinkers, feel that a lot needs to be done, can be done & should be done to bring it at par with rest of society.
-							</p>
+								</p>
 						</div>
 					</div>
 				</div>
@@ -179,6 +181,7 @@
 		<!-- End Generic Start -->
 
 		<!-- Start Contact Area -->
+		<div>
 		<section class="contact-area">
 			<div class="container">
 				<div class="row">
@@ -211,6 +214,7 @@
 				</div>
 			</div>
 		</section>
+		</div>
 		<!-- End Contact Area -->
 
 		<!-- Start Subscription Area -->
@@ -225,7 +229,8 @@
 				<div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap">
 					<p class="footer-text m-0">Copyright &copy; 2018 All rights reserved</p>
 					<div class="footer-social d-flex align-items-center">
-						<a href="#"><i class="fa fa-facebook"></i></a>
+							<div class="fb-page" data-href="https://www.facebook.com/navprayas.np/" data-tabs="timeline" data-width="300" data-height="120" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/navprayas.np/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/navprayas.np/">Navprayas: A Group of Innovative Thoughts</a></blockquote></div>
+						<a href="https://www.facebook.com/navprayas.np/"><i class="fa fa-facebook"></i></a>
 					</div>
 				</div>
 			</div>

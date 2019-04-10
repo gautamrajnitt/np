@@ -2386,8 +2386,9 @@ nav a:hover {
 }
 
 .contact-area {
-  background: #fff;
+  background: white;
   padding: 90px 0 120px 0;
+  position: relative;
 }
 
 .contact-area .single-address {

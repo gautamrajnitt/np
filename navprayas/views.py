@@ -14,5 +14,5 @@ def events(request):
 def notifications(request):
     return render(request, 'navprayas/notifications.html', {})
 
-def contact(request):
-    return render(request, 'navprayas/contact.html', {})
+def team(request):
+    return render(request, 'navprayas/team.html', {})

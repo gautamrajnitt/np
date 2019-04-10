@@ -30,6 +30,8 @@
 		<link rel="stylesheet" href="{% static 'css/main.css' %}">
 	</head>
 	<body class="dup-body">
+			<div id="fb-root"></div>
+            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ta_IN/sdk.js#xfbml=1&version=v3.2"></script>
 		<div class="dup-body-wrap">
 			<!-- Start Header Area -->
 			<header class="default-header">
@@ -43,8 +45,8 @@
 								<a href="/index">Home</a>
 								<a href="/about">About</a>
                                 <a href="/events">Events</a>
-                                <a href="#notifications">Notifications</a>
-                                <a href="#contact">Contact Us</a>
+                                <a href="/notifications">Notifications</a>
+                                <a href="/team">Team</a>
 							</nav>
 							<div class="menu-bar"><span class="lnr lnr-menu"></span></div>
 						</div>
@@ -101,7 +103,7 @@
 						<div class="achivement-content">
 							<h2>Our Events</h2>
 							<p class="mb-30">Few would argue that, despite the advancements of feminism over the past three decades, women still face a double standard when it comes to their behavior. While men’s borderline-inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct </p>
-							<a href="#" class="primary-btn">Know more<span class="lnr lnr-arrow-down"></span></a>
+							<a href="#gallery" class="primary-btn">Take a glimpse of our events!<span class="lnr lnr-arrow-right"></span></a>
 						</div>
 					</div>
 					<div class="col-lg-6">
@@ -109,50 +111,50 @@
 							<div class="row">
 								<div class="col-md-4 col-sm-6">
 									<div class="single-achivement">
-										<a href="#" class="achivement-link">
+										<a href="#mtse" class="achivement-link">
 											<i class="fa fa-behance"></i>
 										</a>
-										<h6><a href="#">MTSE</a></h6>
+										<h6><a href="#mtse">MTSE</a></h6>
 									</div>
 								</div>
 								<div class="col-md-4 col-sm-6">
 									<div class="single-achivement">
-										<a href="#" class="achivement-link">
+										<a href="#puzzlerace" class="achivement-link">
 											<i class="fa fa-dribbble"></i>
 										</a>
-										<h6><a href="#">Puzzle Race</a></h6>
+										<h6><a href="#puzzlerace">Puzzle Race</a></h6>
 									</div>
 								</div>
 								<div class="col-md-4 col-sm-6">
 									<div class="single-achivement">
-										<a href="#" class="achivement-link">
+										<a href="#chess" class="achivement-link">
 											<i class="fa fa-youtube"></i>
 										</a>
-										<h6><a href="#">Chess Competition</a></h6>
+										<h6><a href="#chess">Chess Competition</a></h6>
 									</div>
 								</div>
 								<div class="col-md-4 col-sm-6">
 									<div class="single-achivement">
-										<a href="#" class="achivement-link">
+										<a href="#rangotsav" class="achivement-link">
 											<i class="fa fa-github"></i>
 										</a>
-										<h6><a href="#">Rangotsav</a></h6>
+										<h6><a href="#rangotsav">Rangotsav</a></h6>
 									</div>
 								</div>
 								<div class="col-md-4 col-sm-6">
 									<div class="single-achivement">
-										<a href="#" class="achivement-link">
+										<a href="#fhs" class="achivement-link">
 											<i class="fa fa-trophy"></i>
 										</a>
-										<h6><a href="#">Free hand sketching</a></h6>
+										<h6><a href="#fhs">Free hand sketching</a></h6>
 									</div>
 								</div>
 								<div class="col-md-4 col-sm-6">
 									<div class="single-achivement">
-										<a href="#" class="achivement-link">
+										<a href="#career" class="achivement-link">
 											<i class="fa fa-usd"></i>
 										</a>
-										<h6><a href="#">Career Counselling	</a></h6>
+										<h6><a href="#career">Career Counselling	</a></h6>
 									</div>
 								</div>
 							</div>
@@ -162,7 +164,7 @@
 			</div>
 		</section>
 		<!-- End Achivement Area -->
-		<section class="about-generic-area">
+		<section class="about-generic-area" id="mtse">
 				<div class="overlay overlay-bg"></div>
 				<div class="container border-top-generic">
 					<h3 class="about-title mb-70 text-white">Manpur Talent Search Examination</h3>
@@ -176,7 +178,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="about-generic-area">
+			<section class="about-generic-area" id="puzzlerace">
 					<div class="overlay overlay-bg"></div>
 					<div class="container border-top-generic">
 						<h3 class="about-title mb-70 text-white">Puzzle Race</h3>
@@ -191,7 +193,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="about-generic-area">
+				<section class="about-generic-area" id="chess">
 						<div class="overlay overlay-bg"></div>
 						<div class="container border-top-generic">
 							<h3 class="about-title mb-70 text-white">Chess Competition</h3>
@@ -206,7 +208,7 @@
 							</div>
 						</div>
 					</section>
-					<section class="about-generic-area">
+					<section class="about-generic-area" id="fhs">
 							<div class="overlay overlay-bg"></div>
 							<div class="container border-top-generic">
 								<h3 class="about-title mb-70 text-white">Free hand sketching</h3>
@@ -221,6 +223,70 @@
 								</div>
 							</div>
 						</section>
+						<section class="about-generic-area" id="career">
+								<div class="overlay overlay-bg"></div>
+								<div class="container border-top-generic">
+									<h3 class="about-title mb-70 text-white">Career Counselling</h3>
+									<div class="row">
+										<div class="col-md-12">
+											<div class="img-text">
+												<img src="{% static 'img/a.jpg' %}" alt="" class="img-fluid float-left mr-20 mb-20">
+												<p class="text-white">Recently, the US Federal government banned online casinos from operating in America by making it illegal to transfer money to them through any US bank or payment system. As a result of this law, most of the popular online casino networks such as Party Gaming and PlayTech left the United States. Overnight, online casino players found themselves being chased by the Federal government. But, after a fortnight, the online casino industry came up with a solution and new online casinos started taking root. These began to operate under a different business umbrella, and by doing that, rendered the transfer of money to and from them legal. A major part of this was enlisting electronic banking systems that would accept this new clarification and start doing business with me. Listed in this article are the electronic banking systems that accept players from the United States that wish to play in online casinos.</p>
+											</div>
+										</div>
+										
+									</div>
+								</div>
+							</section>
+							<section class="about-generic-area" id="rangotsav">
+									<div class="overlay overlay-bg"></div>
+									<div class="container border-top-generic">
+										<h3 class="about-title mb-70 text-white">Rangotsav</h3>
+										<div class="row">
+											<div class="col-md-12">
+												<div class="img-text">
+													<img src="{% static 'img/a.jpg' %}" alt="" class="img-fluid float-left mr-20 mb-20">
+													<p class="text-white">Recently, the US Federal government banned online casinos from operating in America by making it illegal to transfer money to them through any US bank or payment system. As a result of this law, most of the popular online casino networks such as Party Gaming and PlayTech left the United States. Overnight, online casino players found themselves being chased by the Federal government. But, after a fortnight, the online casino industry came up with a solution and new online casinos started taking root. These began to operate under a different business umbrella, and by doing that, rendered the transfer of money to and from them legal. A major part of this was enlisting electronic banking systems that would accept this new clarification and start doing business with me. Listed in this article are the electronic banking systems that accept players from the United States that wish to play in online casinos.</p>
+												</div>
+											</div>
+											
+										</div>
+									</div>
+								</section>
+
+								<section class="white-bg" id="gallery">
+										<div class="container">
+											<div class="section-top-border">
+												<h3>Gallery</h3>
+												<div class="row gallery-item">
+													<div class="col-md-4">
+														<a href="{% static 'img/g1.jpg' %}" class="img-pop-up"><div class="single-gallery-image" style="background: url({% static 'img/g1.jpg' %});"></div></a>
+													</div>
+													<div class="col-md-4">
+														<a href="{% static 'img/g2.jpg' %}" class="img-pop-up"><div class="single-gallery-image" style="background: url({% static 'img/g2.jpg' %});"></div></a>
+													</div>
+													<div class="col-md-4">
+														<a href="{% static 'img/g3.jpg' %}" class="img-pop-up"><div class="single-gallery-image" style="background: url({% static 'img/g3.jpg' %});"></div></a>
+													</div>
+													<div class="col-md-6">
+														<a href="{% static 'img/g4.jpg' %}" class="img-pop-up"><div class="single-gallery-image" style="background: url({% static 'img/g4.jpg' %});"></div></a>
+													</div>
+													<div class="col-md-6">
+														<a href="{% static 'img/g5.jpg' %}" class="img-pop-up"><div class="single-gallery-image" style="background: url({% static 'img/g5.jpg' %});"></div></a>
+													</div>
+													<div class="col-md-4">
+														<a href="{% static 'img/g6.jpg' %}" class="img-pop-up"><div class="single-gallery-image" style="background: url({% static 'img/g6.jpg' %});"></div></a>
+													</div>
+													<div class="col-md-4">
+														<a href="{% static 'img/g7.jpg' %}" class="img-pop-up"><div class="single-gallery-image" style="background: url({% static 'img/g7.jpg' %});"></div></a>
+													</div>
+													<div class="col-md-4">
+														<a href="{% static 'img/g8.jpg' %}" class="img-pop-up"><div class="single-gallery-image" style="background: url({% static 'img/g8.jpg' %});"></div></a>
+													</div>
+												</div>
+											</div>
+											</div>
+										</section>
 		<!-- Start Contact Area -->
 		<section class="contact-area">
 			<div class="container">
@@ -243,14 +309,7 @@
 									<p><a href="mailto:navprayas.np2000@gmail.com">navprayas.np2000@gmail.com</a></p>
 								</div>
 							</div>
-							<!-- <div class="col-lg-3 col-md-6">
-								<div class="single-address text-center">
-									<h6>Customer Support</h6>
-									<p><a href="mailto:demo@gmail.com">support@colorlib.com</a> <br>
-										<a href="mailto:demo@gmail.com">emergencysupp@colorlib.com</a> <br>
-										<a href="mailto:demo@gmail.com">extremesupp@colorlib.com</a></p>
-								</div>
-							</div> -->
+							
 				</div>
 			</div>
 		</section>
@@ -267,7 +326,8 @@
 				<div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap">
 					<p class="footer-text m-0">Copyright &copy; 2018 All rights reserved</p>
 					<div class="footer-social d-flex align-items-center">
-						<a href="#"><i class="fa fa-facebook"></i></a>
+							<div class="fb-page" data-href="https://www.facebook.com/navprayas.np/" data-tabs="timeline" data-width="300" data-height="120" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/navprayas.np/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/navprayas.np/">Navprayas: A Group of Innovative Thoughts</a></blockquote></div>
+							<a href="https://www.facebook.com/navprayas.np/"><i class="fa fa-facebook"></i></a>
 					</div>
 				</div>
 			</div>
