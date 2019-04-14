@@ -30,15 +30,15 @@
 		<link rel="stylesheet" href="{% static 'css/main.css' %}">
 	</head>
 	<body class="dup-body">
-            <div id="fb-root"></div>
-            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ta_IN/sdk.js#xfbml=1&version=v3.2"></script>
+            <!-- <div id="fb-root"></div>
+            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ta_IN/sdk.js#xfbml=1&version=v3.2"></script> -->
 		<div class="dup-body-wrap">
 			<!-- Start Header Area -->
 			<header class="default-header">
 				<div class="header-wrap">
 					<div class="header-top d-flex justify-content-between align-items-center">
 						<div class="logo">
-								<a href="#login">Login/Signup</a>
+								<a href="/index">Home</a>
 						</div>
 						<div class="main-menubar d-flex align-items-center">
 							<nav class="hide">
@@ -60,13 +60,14 @@
 				<div class="row height align-items-center justify-content-center">
 					<div class="col-lg-10">
 						<div class="banner-content text-left">
-                            <h2>Notifications</h2>
-                            <ol class="ordered-list">
+							<h2>Notifications</h2>
+							<div data-type="AwesomeTableView" data-viewID="-LcPMFkUhmgDvWdGJRLX"></div>
+                            <!-- <ol class="ordered-list">
                                 <li><a href="https://drive.google.com/file/d/0B6uJWqgZ_cohbTB1Q19vSGVlV3ZadlFUd3pVOHFORDROQTFN/view?usp=sharing" target="_blank">Class 9 MTSE Result declared. Click here!</a></li>
                                 <li><a href="#admitcard">Download Admit card</a></li>
                                 <li><a href="http://www.du.ac.in/du/index.php?page=ug-admission" target="_blank">Circular for admissions in DU colleges</a></li>
                                 <li><a href="#Naachgana">Pratibha Milan 2019 info.</a></li>
-                            </ol>
+                            </ol> -->
 						</div>
 					</div>
 				</div>
@@ -229,7 +230,7 @@
 				<div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap">
 					<p class="footer-text m-0">Copyright &copy; 2018 All rights reserved</p>
 					<div class="footer-social d-flex align-items-center">
-                            <div class="fb-page" data-href="https://www.facebook.com/navprayas.np/" data-tabs="timeline" data-width="300" data-height="120" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/navprayas.np/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/navprayas.np/">Navprayas: A Group of Innovative Thoughts</a></blockquote></div>
+                            <!-- <div class="fb-page" data-href="https://www.facebook.com/navprayas.np/" data-tabs="timeline" data-width="300" data-height="120" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/navprayas.np/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/navprayas.np/">Navprayas: A Group of Innovative Thoughts</a></blockquote></div> -->
                             <a href="https://www.facebook.com/navprayas.np/"><i class="fa fa-facebook"></i></a>
 					</div>
 				</div>
@@ -246,5 +247,6 @@
 		<script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
 		<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
 		<script src="{% static 'js/main.js' %}"></script>
+		<script src="https://awesome-table.com/AwesomeTableInclude.js"></script>
 	</body>
 </html>
