@@ -22,6 +22,13 @@ $(document).ready(function(){
         $(".main-menu").addClass('mobile-menu');
     });
      
+    $(".menu-bar-left").on('click', function(e){
+        e.preventDefault();
+        $("nav").toggleClass('hide');
+        $("span", this).toggleClass("lnr-menu lnr-cross");
+        $(".main-menu").addClass('mobile-menu');
+    });
+
     $('select').niceSelect();
     $('.img-pop-up').magnificPopup({
         type: 'image',

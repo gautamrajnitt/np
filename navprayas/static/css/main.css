@@ -1886,6 +1886,15 @@ nav {
   transform-origin: 100% 50%;
 }
 
+nav.hideleft {
+  margin-left: 70px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  transform-origin: 100% 50%;
+}
+
 @media (max-width: 767px) {
   nav {
     margin-right: 0;
