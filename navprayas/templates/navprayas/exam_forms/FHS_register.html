@@ -1,5 +1,8 @@
 {% extends 'navprayas/base.html' %}
 {% block title %}FHS registration{% endblock %}
+
+{% load crispy_forms_tags %}
+
 {% block content %}
 <section class="section-gap achivement-area">
     <div class="container">
@@ -8,8 +11,8 @@
           <div class="achivement-content">
               <form method="post">
                   {% csrf_token %}
-                  {{form.as_p}}
-                  <button type='submit'>Submit</button>
+                  {{form|crispy}}
+                  <button class="btn btn-danger" type="submit">Submit</button>
                 </form> 
           </div>
         </div>

@@ -1,5 +1,8 @@
 {% extends 'navprayas/base.html' %}
 {% block title %}MTSE registration{% endblock %}
+
+{% load crispy_forms_tags %}
+
 {% load static %}
 
 {% block content %}
@@ -11,8 +14,8 @@
                 <div class="achivement-content">
                     <form method="post">
                         {% csrf_token %}
-                        {{form.as_p}}
-                        <button type='submit'>Submit</button>
+                        {{form|crispy}}
+                        <button class="btn btn-danger" type="submit">Submit</button>
                       </form> 
                 </div>
               </div>

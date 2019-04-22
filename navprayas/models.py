@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.dispatch import receiver
 from django.db.models.signals import post_save
+from django.core.validators import MaxValueValidator, MinValueValidator
+import datetime
     
 # NAME	MOTHER'S NAME 	FATHER'S NAME 	CLASS	SCHOOL/COACHING	BOARD	Q.P.L(H/E)	D.O.B	GENDER	ADDRESS	LANDMARK	PO+PS	DISTRICT	PIN	CONTACT
 GENDER = (
@@ -12,16 +14,16 @@ class Profile (models.Model):
     user            = models.OneToOneField(User, verbose_name="user", on_delete=models.CASCADE)
     city            = models.CharField(max_length=50, blank=True, null=True)
     mother_name     = models.CharField(max_length=50, blank=True, null=True)
-    class_study     = models.CharField(max_length=50, blank=True, null=True)
+    class_study     = models.PositiveIntegerField(default=4, null=True, validators=[MinValueValidator(4), MaxValueValidator(10)])
     school          = models.CharField(max_length=50, blank=True, null=True)
     board           = models.CharField(max_length=50, blank=True, null=True)
     post_office     = models.CharField(max_length=50, blank=True, null=True)
     gender          = models.CharField(max_length=50, blank=True, null=True,choices = GENDER)
     addess          = models.CharField(max_length=50, blank=True, null=True)
     landmark        = models.CharField(max_length=50, blank=True, null=True)
-    birth_date       = models.DateField(max_length=50, blank=True, null=True)
+    birth_date       = models.DateField(("Date of birth"), default=datetime.date.today)
     ditrict         = models.CharField(max_length=50, blank=True, null=True)
-    pin             = models.CharField(max_length=50, blank=True, null=True)
+    pin             = models.PositiveIntegerField(max_length=6, blank=True, null=True)
     
 
     def __str__(self):
@@ -30,7 +32,7 @@ class Profile (models.Model):
 
 def create_profile(sender, **kwargs):
     if(kwargs["created"]):
-        user_profile = Profile.objects.create(user  = kwargs["instance"])
+        user_profile = Profile.objects.create(user = kwargs["instance"])
 
 
 post_save.connect(create_profile,sender=User)
@@ -79,10 +81,10 @@ class SPR (models.Model):
     category = models.CharField(choices=division, max_length=12, blank=False) 
     candidate_2 = models.CharField(max_length=100 , blank=False)
     address_2 = models.CharField(max_length=100 , blank=False)
-    contact_2 = models.CharField(max_length=12 , blank=False)
+    contact_2 = models.PositiveIntegerField(validators=[MinValueValidator(1000000000), MaxValueValidator(9999999999)] , blank=False)
     candidate_3 = models.CharField(max_length=100 , blank=False)
     address_3 = models.CharField(max_length=100 , blank=False)
-    contact_3 = models.CharField(max_length=12 , blank=False)
+    contact_3 = models.PositiveIntegerField(validators=[MinValueValidator(1000000000), MaxValueValidator(9999999999)] , blank=False)
     
 
 class rangotsav (models.Model):

@@ -1,6 +1,8 @@
 {% extends 'navprayas/base.html' %}
 {% block title %}Navprayas Sign In{% endblock %}
 
+{% load crispy_forms_tags %}
+
 {% block content %}
 <br><br><br>
 
@@ -16,10 +18,10 @@
 				<div class="row align-items-center">
 					<div class="col-lg-5">
 						<div class="achivement-content">
-							<h2>Sign in</h2><hr>
+							<h2>Log in</h2><hr>
 							<form method="post">
                   {% csrf_token %}
-                  {{ form.as_p }}
+                  {{ form|crispy }}
                   <button class="btn btn-danger" type="submit">Login</button>
               </form>
               <hr/>
